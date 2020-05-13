@@ -1,3 +1,9 @@
+/*
+font-family: 'Comfortaa', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Source Code Pro', monospace;
+*/
+
 /* soft reset do css */
 * {
     margin: 0;
@@ -6,11 +12,11 @@
 }
 
 body {
-    background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
-    background-size: auto 100vh;
-    font-family: Arial;
+    background-color: cadetblue;
+    background-size: 100vw 100vh;
+    font-family: 'Source Code Pro', monospace;
     height: 100vh;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /* breakpoint: se a tela tiver pelo menos 400px vai carregar o estilo abaixo */
@@ -21,9 +27,13 @@ body {
 }
 
 header {
+    /*background-image: url("../img/bg.jpg");*/
+    background-color: rgb(9, 50, 116);
+    background-size: 100vw 100vh;
+    opacity: 0.8;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: flex; /* um ao lado do outro */
+    justify-content: space-around; /* alinha com espaço ao redor */
     align-items: center;
 }
 
@@ -36,8 +46,8 @@ header {
 }
 
 .menu ul {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* um ao lado do outro */
+    justify-content: space-around; /* alinha com espaço ao redor */
 }
 
 .menu li {
@@ -51,11 +61,18 @@ header {
 
 a {
     color: teal;
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.img-dev {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .site-title,
@@ -65,15 +82,103 @@ a:hover {
 }
 
 .site-title {
-    font-size: 4em;
+    font-size: 4em;    
 }
 
 .site-subtitle {
-    font-style: italic;
+    font-size: 2.4em;
+    font-family: 'Shadows Into Light', monospace;
+    line-height: 2.4em;
 }
 
-.img-portfolio {
+.projetos {
+    padding: 2em;
+    height: 100vh;
+}
+
+.projetos h2 {
+    color: whitesmoke;
+    font-family: 'Shadows Into Light', monospace;
+    font-size: 3em;
+    margin: 1em;
+}
+
+.projetos .grid {
+    display: grid;
+    gap: 2em; /* espaçamentro entre cada c/l do grid */
+}
+
+@media (min-width: 520px) {
+    .projetos .grid {
+        grid-template-columns: repeat(2, 260px); /* tres colunas de 240px */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .projetos .grid {
+        grid-template-columns: repeat(3, 260px); /* tres colunas de 240px */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 780px) {
+    .projetos .grid {
+        grid-template-columns: repeat(4, 260px); /* tres colunas de 240px */
+        align-content: center;
+        justify-content: center;
+        /*height: calc(100vh - 4em - 48px - 2em);*/
+    }
+}
+
+.projetos figure {
+    text-align: center;
+}
+
+.img-projetos {
     height: 180px;
     width: 240px;
+    object-fit: cover; /* imagens encaixando no tamanho passado */
+    /*object-position: left bottom;*/
+    border-radius: 10%;
 }
 
+.img-projetos:hover {
+    height: 140px;
+    width: 200px;
+    object-fit: cover; /* imagens encaixando no tamanho passado */
+    opacity: 0.8;
+}
+
+figcaption {
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+/*footer {
+    display: flex; /* um ao lado do outro */
+    /*justify-content: space-around; /* alinha com espaço ao redor */
+   /* align-items: center;
+}
+
+.rodape {
+    background-color: black;
+    font-size: 16px;
+    margin-top: auto;
+    width: 100vw;
+}
+
+.rodape ul {
+    display: flex; /* um ao lado do outro */
+    /*justify-content: space-around; /* alinha com espaço ao redor */
+/*}
+
+.rodape li {
+    list-style: none;
+}
+
+.rodape a {
+    display: block;
+    padding: 10px 20px;
+}
+*/
