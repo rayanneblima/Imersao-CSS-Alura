@@ -1,3 +1,8 @@
+<!--TODO: 
+-IMAGENS SOBREPONDO MENU;
+-FAVICON;
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayanne B. Lima</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap"
-        rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="/img/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Condensed&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a0c1e1089.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,36 +22,20 @@
         <nav class="menu">
             <ul>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         <div class="title">
-            <figure>
-                <center><img class="img-dev" src="img/rayanne.jpg" alt="Rayanne B. Lima"></center>
-            </figure>
-            <h1 class="site-title">{ Rayanne B. Lima }</h1>
-            <h2 class="site-subtitle">jr. FullStack Developer</h2>
+            <img class="img-dev" src="img/rayanne.jpg" alt="Rayanne B. Lima">
+            <h1 class="title-dev">{ Rayanne B. Lima }</h1>
+            <h2 class="subtitle-dev">Desenvolvedora FullStack Jr.</h2>
+            <h3 class="educ-dev">Graduanda em Ciência da Computação</h3>
+            <h3 class="educ-dev">Instituto Federal - Campus Rio Pomba</h3>          
         </div>
     </header>
 
-    <!--<section class="sobre">
-        <h2 class="section-title">Sobre</h2>
-        <figure>
-            <img class="img-projetos" src="">
-            <figcaption>Formação</figcaption>
-        </figure>
-        <figure>
-            <img class="img-projetos" src="">
-            <figcaption>Certificados</figcaption>
-        </figure>
-        <figure>
-            <img class="img-projetos" src="">
-            <figcaption>Áreas de Interesse</figcaption>
-        </figure>
-    </section>-->
-
-    <section class="projetos">
+    <section class="projetos" id="projetos">
         <h2>Projetos</h2>
 
         <div class="grid">
@@ -70,33 +59,23 @@
         
     </section>
 
-    <!--<section>
-        <h2 class="section-title">Contato</h2>
-        <div class="projetos">
-            <figure>
-                <img class="img-projetos" src="">
-                <figcaption>GitHub</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="">
-                <figcaption>LinkedIn</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="">
-                <figcaption>Telegram</figcaption>
-            </figure>
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+
+        <div class="grid icons">
+            <a target="_blank" href="https://github.com/rayanneblima/"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://linkedin.com/in/rayannebertolacelima/"><i class="fab fa-linkedin"></i></a>
+            <a target="_blank" href="https://t.me/rayanneblima"><i class="fab fa-telegram"></i></a>
+            <a target="_blank" href="mailto:rayanne_lima2010@hotmail.com"><i class="fas fa-envelope"></i></i></a>
         </div>
+        
     </section>
 
     <footer>
         <nav class="rodape">
-            <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Portfólio</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+           <h5>Desenvolvido por Rayanne B. Lima na #ImersãoCSS da Alura</h5>
         </nav>
-    </footer>-->
+    </footer>
 </body>
 
 </html>

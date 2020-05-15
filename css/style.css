@@ -1,7 +1,7 @@
-/*
-font-family: 'Comfortaa', cursive;
-font-family: 'Shadows Into Light', cursive;
-font-family: 'Source Code Pro', monospace;
+/* FONTES USADAS:
+font-family: 'Roboto Condesed', sans-serif; BODY
+font-family: 'Libre Baskerville', serif; NOME
+font-family: 'Roboto Slab', serif; TÍTULOS
 */
 
 /* soft reset do css */
@@ -12,11 +12,12 @@ font-family: 'Source Code Pro', monospace;
 }
 
 body {
-    background-color: cadetblue;
+    background-color: rgb(6, 38, 88);
     background-size: 100vw 100vh;
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
     font-size: 12px;
+    font-family: 'Roboto Condesed', sans-serif;
 }
 
 /* breakpoint: se a tela tiver pelo menos 400px vai carregar o estilo abaixo */
@@ -28,7 +29,7 @@ body {
 
 header {
     /*background-image: url("../img/bg.jpg");*/
-    background-color: rgb(9, 50, 116);
+    background-color: cadetblue;
     background-size: 100vw 100vh;
     opacity: 0.8;
     height: 100vh;
@@ -43,6 +44,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
 }
 
 .menu ul {
@@ -55,50 +57,81 @@ header {
 }
 
 .menu a {
+    color: teal;
     display: block;
     padding: 10px 20px;
-}
-
-a {
-    color: teal;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+.menu a:active,
+.menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
+    border-bottom-right-radius: 20%;
 }
 
 .img-dev {
-    height: 180px;
-    width: 180px;
+    border-width: 5px;
+    border-style: inset;
     border-radius: 50%;
+    display: block;
+    filter: contrast(140%);
+    filter: saturate(140%);
+    height: 180px;
+    margin: auto;
+    margin-bottom: 1em;
     object-fit: cover;
+    width: 180px;
 }
 
-.site-title,
-.site-subtitle {
+.img-dev:active,
+.img-dev:hover {
+    box-shadow: 0px 0px 20px rgb(6, 38, 88, 1);
+}
+
+.title {
     color: whitesmoke;
     text-align: center;
+    animation: linear 2s animaTitle;
 }
 
-.site-title {
-    font-size: 4em;    
+@keyframes animaTitle {
+    0% {
+        transform: scale(.2) translateY(50vh);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
-.site-subtitle {
-    font-size: 2.4em;
-    font-family: 'Shadows Into Light', monospace;
-    line-height: 2.4em;
+.title-dev {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;  
+    line-height: 2em;
 }
 
+.subtitle-dev {
+    font-size: 2em;
+    line-height: 3em;
+}
+
+.educ-dev {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.contato,
 .projetos {
     padding: 2em;
-    height: 100vh;
+    /*min-height: 100vh;*/
 }
 
+.contato h2,
 .projetos h2 {
     color: whitesmoke;
-    font-family: 'Shadows Into Light', monospace;
+    font-family: 'Roboto Slab', serif;
     font-size: 3em;
     margin: 1em;
 }
@@ -108,21 +141,21 @@ a:hover {
     gap: 2em; /* espaçamentro entre cada c/l do grid */
 }
 
-@media (min-width: 520px) {
+@media (min-width: 610px) {
     .projetos .grid {
         grid-template-columns: repeat(2, 260px); /* tres colunas de 240px */
         justify-content: center;
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 820px) {
     .projetos .grid {
         grid-template-columns: repeat(3, 260px); /* tres colunas de 240px */
         justify-content: center;
     }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 1100px) {
     .projetos .grid {
         grid-template-columns: repeat(4, 260px); /* tres colunas de 240px */
         align-content: center;
@@ -141,44 +174,58 @@ a:hover {
     object-fit: cover; /* imagens encaixando no tamanho passado */
     /*object-position: left bottom;*/
     border-radius: 10%;
+    transition: transform 1s;
 }
 
+/*.img-projetos:active,
 .img-projetos:hover {
-    height: 140px;
-    width: 200px;
-    object-fit: cover; /* imagens encaixando no tamanho passado */
+    box-shadow: 0px 0px 10px rgba(255,255,255,.5);
+    object-fit: cover; /* imagens encaixando no tamanho passado 
     opacity: 0.8;
-}
+    transform: scale(1.1) rotate(5deg);
+}*/
 
 figcaption {
     color: whitesmoke;
     font-size: 1.5em;
 }
 
-/*footer {
+.contato a {
+    color:whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgba(255,255,255,.5);
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.fab, .fas {
+    padding: 10px;
+}
+
+footer {
     display: flex; /* um ao lado do outro */
-    /*justify-content: space-around; /* alinha com espaço ao redor */
-   /* align-items: center;
+    justify-content: space-around; /* alinha com espaço ao redor */
+    align-items: center;
 }
 
 .rodape {
+    color: whitesmoke;
     background-color: black;
+    text-align: center;
     font-size: 16px;
     margin-top: auto;
     width: 100vw;
-}
-
-.rodape ul {
-    display: flex; /* um ao lado do outro */
-    /*justify-content: space-around; /* alinha com espaço ao redor */
-/*}
-
-.rodape li {
-    list-style: none;
 }
 
 .rodape a {
     display: block;
     padding: 10px 20px;
 }
-*/
