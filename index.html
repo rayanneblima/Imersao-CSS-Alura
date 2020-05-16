@@ -1,6 +1,9 @@
-<!--TODO: 
--IMAGENS SOBREPONDO MENU;
--FAVICON;
+<!--TODO:
+-ADICIONAR TCC AOS PROJETOS;
+-ADICIONAR SEÇÃO DE ESTUDOS ATUAIS;
+-ADICIONAR SEÇÃO DE CERTIFICADOS (?);
+-MOSTRAR INFORMAÇÃO SOBRE OS PROJETOS AO CLICAR NO CARD;
+-PÁGINA ~SOBRE~ MAIS "CHAMATIVA";
 -->
 
 <!DOCTYPE html>
@@ -14,15 +17,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Condensed&family=Roboto+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6a0c1e1089.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/css-doodle@0.8.5/css-doodle.min.js"></script>
 </head>
 
 <body>
-
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#estudos">Estudos Atuais</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -31,40 +35,65 @@
             <h1 class="title-dev">{ Rayanne B. Lima }</h1>
             <h2 class="subtitle-dev">Desenvolvedora FullStack Jr.</h2>
             <h3 class="educ-dev">Graduanda em Ciência da Computação</h3>
-            <h3 class="educ-dev">Instituto Federal - Campus Rio Pomba</h3>          
+            <h3 class="educ-dev">Instituto Federal de Educação, Ciência e Tecnologia - Campus Rio Pomba</h3>    
         </div>
     </header>
-
-    <section class="projetos" id="projetos">
-        <h2>Projetos</h2>
+    <section class="projetos container" id="projetos">
+        <span></span><h2>Projetos</h2><span></span>
 
         <div class="grid">
             <figure>
-                <img class="img-projetos" src="img/rolenoif.png" alt="Rolê no IF - Android">
+                <img class="img-cards" src="img/rolenoif.png" alt="Rolê no IF - Android">
                 <figcaption>Rolê no IF - Android</figcaption>
             </figure>
             <figure>
-                <img class="img-projetos" src="img/rpfood.png" alt="RP Food - Android">
+                <img class="img-cards" src="img/rpfood.png" alt="RP Food - Android">
                 <figcaption>RP Food - Android</figcaption>
             </figure>
             <figure>
-                <img class="img-projetos" src="img/papojovem.jpg" alt="PapoJovem! - Web">
+                <img class="img-cards" src="img/papojovem.jpg" alt="PapoJovem! - Web">
                 <figcaption>PapoJovem! - Web</figcaption>
             </figure>
             <figure>
-                <img class="img-projetos" src="img/cartaovisitas1.png" alt="Cartão de Visitas & Logomarca">
+                <img class="img-cards" src="img/cartaovisitas1.png" alt="Cartão de Visitas & Logomarca">
                 <figcaption>Cartão de Visitas & Logomarca</figcaption>
             </figure>
             <figure>
-                <img class="img-projetos" src="img/ppdev.png" alt="Projetos Pessoais">
+                <img class="img-cards" src="img/tcc.jpg" alt="Ferramenta de Apoio ao Diagnóstico Dermatológico - TCC">
+                <figcaption>Ferramenta de Apoio ao Diagnóstico Dermatológico - TCC</figcaption>
+            </figure>
+            <figure>
+                <img class="img-cards" src="img/ppdev.png" alt="Projetos Pessoais">
                 <figcaption>Projetos Pessoais</figcaption>
             </figure>
         </div>
         
     </section>
+    <section class="estudos container" id="estudos">
+        <span></span><h2>Estudos Atuais</h2><span></span>
 
-    <section class="contato" id="contato">
-        <h2>Contato</h2>
+        <div class="grid">
+            <figure>
+                <img class="img-cards" src="img/java.jpg" alt="Java">
+                <figcaption>Java</figcaption>
+            </figure>
+            <figure>
+                <img class="img-cards" src="img/javascript.png" alt="JavaScript">
+                <figcaption>JavaScript</figcaption>
+            </figure>
+            <figure>
+                <img class="img-cards" src="img/python.png" alt="Python">
+                <figcaption>Python</figcaption>
+            </figure>
+            <figure>
+                <img class="img-cards" src="img/ingles.jpg" alt="Inglês">
+                <figcaption>Inglês</figcaption>
+            </figure>
+        </div>
+        
+    </section>
+    <section class="contato container" id="contato">
+        <span></span><h2>Contato</h2><span></span>
 
         <div class="grid icons">
             <a target="_blank" href="https://github.com/rayanneblima/"><i class="fab fa-github"></i></a>
@@ -74,7 +103,6 @@
         </div>
         
     </section>
-
     <footer>
         <nav class="rodape">
            <h5>Desenvolvido por Rayanne B. Lima na #ImersãoCSS da Alura</h5>

@@ -31,7 +31,7 @@ header {
     /*background-image: url("../img/bg.jpg");*/
     background-color: cadetblue;
     background-size: 100vw 100vh;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
     height: 100vh;
     display: flex; /* um ao lado do outro */
     justify-content: space-around; /* alinha com espaço ao redor */
@@ -40,7 +40,7 @@ header {
 
 .menu {
     background-color: white;
-    font-size: 16px;
+    font-size: 2em;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -73,10 +73,12 @@ header {
 .img-dev {
     border-width: 5px;
     border-style: inset;
+    box-shadow: 0px 0px 20px rgb(211, 216, 224);
+    /*clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
     border-radius: 50%;
     display: block;
-    filter: contrast(140%);
-    filter: saturate(140%);
+    filter: contrast(120%);
+    filter: saturate(120%);
     height: 180px;
     margin: auto;
     margin-bottom: 1em;
@@ -92,7 +94,7 @@ header {
 .title {
     color: whitesmoke;
     text-align: center;
-    animation: linear 2s animaTitle;
+    /*animation: linear 2s animaTitle;*/
 }
 
 @keyframes animaTitle {
@@ -109,12 +111,12 @@ header {
 .title-dev {
     font-family: 'Libre Baskerville', serif;
     font-size: 3em;  
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .subtitle-dev {
     font-size: 2em;
-    line-height: 3em;
+    line-height: 2em;
 }
 
 .educ-dev {
@@ -123,39 +125,84 @@ header {
 }
 
 .contato,
+.estudos,
 .projetos {
     padding: 2em;
     /*min-height: 100vh;*/
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .contato h2,
+.estudos h2,
 .projetos h2 {
     color: whitesmoke;
     font-family: 'Roboto Slab', serif;
+    text-align: center;
     font-size: 3em;
     margin: 1em;
+    overflow: hidden;
 }
 
+.contato h2:before,
+.contato h2:after,
+.estudos h2:before,
+.estudos h2:after,
+.projetos h2:before,
+.projetos h2:after {
+    background-color: whitesmoke;
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.contato h2:before,
+.estudos h2:before,
+.projetos h2:before  {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.contato h2:after,
+.estudos h2:after,
+.projetos h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.estudos .grid,
 .projetos .grid {
     display: grid;
     gap: 2em; /* espaçamentro entre cada c/l do grid */
 }
 
 @media (min-width: 610px) {
+    .estudos .grid,
     .projetos .grid {
         grid-template-columns: repeat(2, 260px); /* tres colunas de 240px */
         justify-content: center;
     }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 850px) {
+    .estudos .grid,
     .projetos .grid {
         grid-template-columns: repeat(3, 260px); /* tres colunas de 240px */
         justify-content: center;
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
+    .estudos .grid,
     .projetos .grid {
         grid-template-columns: repeat(4, 260px); /* tres colunas de 240px */
         align-content: center;
@@ -164,21 +211,22 @@ header {
     }
 }
 
+.estudos figure,
 .projetos figure {
     text-align: center;
 }
 
-.img-projetos {
+.img-cards {
     height: 200px;
-    width: 240px;
+    width: 250px;
     object-fit: cover; /* imagens encaixando no tamanho passado */
     /*object-position: left bottom;*/
     border-radius: 10%;
     transition: transform 1s;
 }
 
-.img-projetos:active,
-.img-projetos:hover {
+.img-cards:active,
+.img-cards:hover {
     box-shadow: 0px 0px 10px rgba(255,255,255,.5);
     object-fit: cover; /* imagens encaixando no tamanho passado */
     opacity: 0.8;
@@ -211,21 +259,8 @@ figcaption {
 }
 
 footer {
-    display: flex; /* um ao lado do outro */
-    justify-content: space-around; /* alinha com espaço ao redor */
-    align-items: center;
-}
-
-.rodape {
     color: whitesmoke;
     background-color: black;
     text-align: center;
-    font-size: 16px;
-    margin-top: auto;
-    width: 100vw;
-}
-
-.rodape a {
-    display: block;
-    padding: 10px 20px;
+    font-size: 1.5em;
 }
