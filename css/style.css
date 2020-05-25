@@ -70,6 +70,20 @@ header {
     border-bottom-right-radius: 20%;
 }
 
+@media (min-width: 610px)
+.menu {
+    font-size: 2em;
+}
+
+@media (min-width: 320px)
+.menu {
+    font-size: 1em;
+}
+@media (min-width: 200px)
+.menu {
+    font-size: .8em;
+}
+
 .img-dev {
     border-width: 5px;
     border-style: inset;
